@@ -302,8 +302,11 @@ sudo docker run -d \
   --name oracle-free \
   -p 1521:1521 \
   -e ORACLE_PASSWORD=Oracle123 \
+  -e APP_USER=franklyn \
+  -e APP_USER_PASSWORD=Sql12345 \
   gvenzl/oracle-free:latest
 ```
+
 
 ## Explicación del comando
 
@@ -369,6 +372,14 @@ En este laboratorio:
 Password:
 Oracle123
 ```
+
+## `-e APP_USER=franklyn `
+
+Crea el nombre de usuario en la base de datos.
+
+## ` -e APP_USER_PASSWORD=Sql12345 `
+
+Crea la clave para el usuario en la base de datos.
 
 **Nota:** para un entorno real de producción debe utilizarse una contraseña fuerte y gestionada de forma segura. Esta contraseña se utiliza aquí únicamente como credencial de laboratorio.
 
