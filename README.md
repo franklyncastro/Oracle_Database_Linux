@@ -551,6 +551,29 @@ Password: Sql12345
 
 ---
 
+
+## NOTA:  Como conectarse a SQL desde la terminal con el contenedor de docker:
+
+```text
+ --> sudo docker exec -it oracle-free sqlplus system/Oracle123@FREEPDB1
+```
+Una vez te conectes puedes ejecutar comandos directo en la terimnal, en caso que
+quieras crear otro usuarios, agregar permisos etc.
+
+## Ejemplos: 
+Puedes cambiar el nombre de usuario a tu gusto.
+
+```
+CREATE USER franklyn IDENTIFIED BY Sql12345; 
+GRANT CREATE SESSION TO franklyn;   
+GRANT CREATE TABLE TO franklyn;  
+ALTER USER franklyn QUOTA UNLIMITED ON USERS;
+GRANT CREATE VIEW TO franklyn;
+GRANT CREATE SEQUENCE TO franklyn;
+GRANT CREATE PROCEDURE TO franklyn;
+```
+ 
+
 # 14. Probar la conexión
 
 En DBeaver utilizar:
